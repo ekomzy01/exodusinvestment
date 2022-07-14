@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import Dots from "./Dots";
-// import Carousel from "react-elastic-carousel";
 import { Container } from "reactstrap";
 import "./testimonial.css";
 import data from "./data";

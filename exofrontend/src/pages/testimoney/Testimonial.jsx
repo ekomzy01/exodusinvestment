@@ -7,9 +7,6 @@ import Carousel from "react-elastic-carousel";
 import "./testimonial.css";
 
 const Testimonial = () => {
-  // const arrow = document.getElementsByClassName("rec-arrow-left");
-  // arrow.textcontent = "-->";
-  // console.log(arrow);
   return (
     <>
       <div className="x-testimonials x-testimonials-carousel">
