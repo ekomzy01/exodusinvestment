@@ -1,0 +1,208 @@
+.wallet-app{
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+}
+
+.home__wallet .home__wallet-more{
+    background-image: linear-gradient(309deg,#420be6,#a16bb3);
+    box-shadow: 0 10px 30px 0 rgb(111 57 205 / 30%);
+    color: #fff;
+    font-size: 20px !important;
+    font-weight: 200;
+    max-width: 100%;
+    padding: 50px 30px 40px;
+    position: relative;
+    text-align: left;
+    width: 300px;
+    z-index: 3;
+    margin: -140px 0 0 auto;
+}
+
+.home__wallet .home__wallet-more h3{
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.wallet-btn{
+    align-items: center;
+    background: rgba(255,255,255,.15);
+    color: rgba(255,255,255,.8);
+    display: flex;
+    font-size: 12px;
+    font-weight: 500;
+    height: 44px;
+    letter-spacing: 1px;
+    line-height: 1.67;
+    margin-top: 30px;
+    padding: 0 20px;
+    text-transform: uppercase;
+}
+
+.wallet-btn svg{
+    margin-left: auto;
+}
+
+.home__wallet-apps{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 16px;
+}
+
+.x-h2-hp-section{
+    color: #fff;
+    font-size: 80px;
+    font-weight: 300;
+    line-height: 1.1;
+    margin: 80px 0 32px;
+    padding: 0;
+    text-align: center;
+    
+}
+
+.x-p-hp-section{
+    color: #fff;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.5;
+    margin: 0;
+    text-align: center;
+    opacity: .5;
+    padding: 0 46px;
+
+}
+
+.home__wallet-apps__img{
+    background: url("../../assests/images/appsvg.svg") no-repeat 50%;
+    height: 100px;
+    margin: 50px 0;
+    width: 100%;
+}
+
+.x-break-lg{
+    display: block;
+}
+
+.home__button{
+    background-clip: padding-box!important;
+    background-image: linear-gradient(281deg,#420be6,#a16bb3);
+    background-size: 101%;
+    border: 1px solid transparent;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px 0 rgb(111 57 205 / 30%);
+    color: #fff;
+    display: block;
+    font-family: Roboto,sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    height: 48px;
+    opacity: .8;
+    outline: none;
+    padding: 2px;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: opacity .2s linear;
+    max-width: 100%;
+    width: 480px;
+}
+
+.home__button-align{
+    border-radius: 24px;
+    cursor: pointer;
+    display: block;
+    height: 100%;
+    line-height: 42px;
+}
+
+.home__button-align-text{
+    align-items: center;
+    display: flex;
+    justify-content: center !important;
+}
+
+.features{
+
+    margin-top: 140px;
+}
+
+.features svg{
+    display: block;
+    height: 40px;
+    margin: 0 auto 24px;
+    width: 40px;
+
+}
+
+.x-features__col{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    justify-content: space-between;
+    padding: 0 5%;
+    text-align: center;
+    width: 33%;
+
+}
+
+.x-features__col:not(:last-child){
+    border-right: 1px solid rgba(255,255,255,.1);
+}
+
+.x-features__numbering{
+    color: rgba(255,255,255,.2);
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.x-features__col h3{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.5;
+    margin: 10px 0 30px;
+}
+
+@media (max-width: 1000px){
+    .x-page-index .x-wallet-apps__img, .home__wallet-apps__img {
+        background: url("./bg/apps-ssize.svg") no-repeat 50%;
+        background-size: auto 100%;
+    }}
+
+    @media (max-width: 768px){
+.x-page-index .x-wallet-apps__img, .home__wallet-apps__img {
+    margin: 24px 0;
+}
+
+.x-page-index .x-features, .features {
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.x-features__col {
+    margin-bottom: 32px;
+    width: 100%;
+    border: none;
+}
+
+.x-features__col:not(:last-child) {
+    border-right: 0;
+}
+
+.x__feature-banner .x__preview-img img{
+    display: none;
+}
+
+}
+
+@media (max-width: 540px){
+    .x-page-index .x-wallet-apps__img, .home__wallet-apps__img {
+        background-size: 104% auto;
+}
+
+}

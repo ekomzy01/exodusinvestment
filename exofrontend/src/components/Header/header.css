@@ -1,0 +1,200 @@
+.header{ 
+    font-family: Roboto;
+     /* position: fixed; */
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    background-color: #1f1b34;
+    z-index: 1030;
+    position: relative;
+}
+
+.hamburger{
+    display: none;
+}
+
+.header .navigation{
+    display: flex;
+    align-items: center;
+    max-height: 86px;
+    overflow: visible;
+    transition: all .5s;
+}
+
+.logo-container{
+    width: 200px;
+    height: auto;
+}
+
+.logo-container img{
+    width: 100%;
+}
+
+.header .nav__list{
+    list-style: none;
+}
+
+.header .nav__item{
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+.header .nav__item a{
+    text-decoration: none;
+    color: #fff;
+    padding: 16px 18px;
+}
+
+.header .header__btn{
+    border: 1px solid #302154;
+    display: block;
+    height: 40px;
+    letter-spacing: 1px;
+    width: 170px;
+
+    background-clip: padding-box!important;
+    background-image: linear-gradient(281deg,#420be6,#a16bb3);
+    background-size: 101%;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px 0 rgb(111 57 205 / 30%);
+    color: #fff;
+    font-family: Roboto,sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    opacity: .8;
+    outline: none;
+    padding: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: opacity .2s linear;
+}
+
+.x__topbar-header-navigation-item__home {
+    display: none;
+    opacity: .8;
+}
+
+@media screen  and (max-width: 990px) {
+    .nav__menu{
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger-react{
+        z-index: 2147483647;
+    }
+
+    .header .navigation{
+        display: flex;
+        align-items: center;
+        justify-content: space-between !important;
+        max-height: 86px;
+        overflow: visible;
+        transition: all .5s;
+    }
+
+     
+
+    .navbar-collapse:before {
+        -webkit-animation: overlay .8s ease .1s forwards;
+        animation: overlay .8s ease .1s forwards;
+        background: #1f1b34;
+        border-radius: 50%;
+        content: "";
+        display: block;
+        opacity: 0;
+        padding-top: 0;
+        position: absolute;
+        width: 0;
+    }
+    
+    .navbar-collapse.collapse.show {
+        background: #1f1b34;
+        
+        bottom: 0;
+        display: flex;
+        height: 100vh;
+        left: 0;
+        max-height: none;
+        position: fixed;
+        right: 0;
+        top: 0px;
+    }
+
+    .navbar-collapse {
+        align-items: center;
+        flex-basis: 100%;
+        flex-grow: 1;
+        justify-content: center;
+        left: 0;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        top: 0;
+        transition: all .35s ease;
+        width: 100%;
+        z-index: 100;
+    }
+
+    .navbar-collapse.collapse.show .x__topbar-header-container {
+        -webkit-animation: navbar-nav .8s ease .1s forwards;
+        animation: navbar-nav .8s ease .1s forwards;
+    }
+    
+  
+    .x__topbar-header-container {
+        flex-direction: column;
+      
+        position: absolute;
+        top: 0px;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        -webkit-transform: translateY(100px);
+        transform: translateY(100px);
+    }    
+
+    .x__topbar-header-navigation {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+        overflow: visible;
+        width: 140px;
+        margin: 0;
+        padding: 0;
+    }
+
+
+
+
+    .x__topbar-header-navigation-item__home {
+        display: inline-block;
+        opacity: .8;
+    }
+    
+    
+ 
+    .x__topbar-header-navigation-item {
+        display: flex;
+        align-items: flex-start;
+        border: none;
+        flex-direction: column;
+        font-size: 20px;
+        text-align: center;
+        color: #fff;
+        cursor: pointer;
+        font-weight: 400;
+        list-style: none;
+        position: relative;
+        text-decoration: none;
+        white-space: nowrap;
+        transition: all .2s linear;
+    }
+
+
+}

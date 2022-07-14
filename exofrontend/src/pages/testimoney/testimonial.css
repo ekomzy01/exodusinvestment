@@ -1,0 +1,155 @@
+
+.x-testimonials-carousel {
+    box-sizing: content-box;
+    margin: 80px auto 128px;
+    max-width: 900px;
+    padding: 0 16px;
+    text-align: left;
+    width: 70%;
+}
+
+.inner {
+    display: flex;
+}
+
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+
+.x-testimonials-carousel__content p {
+    color: #fff;
+    font-size: 24px;
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: 100;
+    letter-spacing: normal;
+    line-height: 1.5;
+    margin: 140px auto 0;
+    padding: 0;
+    text-align: center;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+.carousel-item {
+    min-height: 462px;
+    position: relative;
+    display: block !important;
+    align-items: center;
+    width: 100%;
+    transition: transform .6s ease;
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+.x-testimonials-carousel__author {
+   
+    display: flex;
+    justify-content: center;
+    margin: 80px 0 50px;
+    align-items: center;
+}
+
+.x-testimonials-carousel__author img {
+    height: 48px;
+    margin-right: 20px;
+    -o-object-fit: contain;
+    object-fit: contain;
+    -o-object-position: center;
+    object-position: center;
+    width: 50px;
+}
+
+.guIbWC {
+    box-sizing: border-box;
+    display: -ms-flexbox;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    display: block !important;
+}
+
+/* Dots */
+.active{
+    display: flex;
+}
+
+.inactive{
+    display: none;
+}
+
+.all-dot{
+    display: flex;
+    justify-content: center;
+}
+
+.dots {
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+    margin: 15px;
+    background: rgba(255, 255, 255, .3);
+    border-radius: 50px;
+}
+
+.carousel-indicators {
+    position: absolute;
+    right: 0;
+    bottom: -50px !important;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0 !important;
+  
+}
+
+.active-dot, 
+.dot:hover{
+    background: #fff;
+    color: #000;
+    font-weight: bold;
+}
+
+@keyframes transform {
+
+    0% {
+        transform: translateX(180%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+    /* 0%,
+    23% {
+      transform: translate3d(0,0,0);
+    }
+    25%,
+    48% {
+      transform: translate3d(-25%,0,0);
+    }
+    50%,
+    73% {
+      transform: translate3d(-50%,0,0);
+    }
+    75%,
+    98% {
+      transform: translate3d(-75%,0,0);
+    }
+    100% {
+      transform: translate3d(0,0,0);
+    } */
+  
+}

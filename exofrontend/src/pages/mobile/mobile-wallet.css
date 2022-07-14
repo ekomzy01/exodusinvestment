@@ -1,0 +1,206 @@
+section{padding: 14px !important;}
+
+.mobile-wallet{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mobile-wallet .h2-mobile-wallet{
+    color: #fff;
+    font-size: 80px;
+    font-weight: 300;
+    line-height: 1.1;
+    margin: 80px 0 32px;
+    padding: 0;
+}
+
+.mobile-wallet .p-mobile-wallet{
+    color: #fff;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.5;
+    margin: 0;
+    opacity: .5;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.mobile__wallet-content{
+    display: flex;
+}
+
+.mobile-wallet-pictures{
+    padding: 0 15px;
+}
+
+.mobile-wallet-pictures .m-w-img{
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgb(0 0 0 / 30%);
+    margin: 4% 14% 24%
+}
+
+.mobile__wallet-content .mobile-wallet-pictures img{
+    width: 100%;
+}
+
+.mobile__wallet-content .mobile-wallet-pictures .mobile-wallet-dommie{
+    width:100%;
+}
+
+.mobile-wallet .x-more{
+    background-image: linear-gradient(309deg,#420be6,#a16bb3);
+    box-shadow: 0 10px 30px 0 rgb(111 57 205 / 30%);
+    color: #fff;
+    font-size: 20px !important;
+    font-weight: 200;
+    max-width: 100%;
+    padding: 50px 30px 40px;
+    position: relative;
+    text-align: left;
+    width: 300px;
+    z-index: 3;
+    margin: -140px 0 0 auto;
+}
+
+.mobile-wallet .x-more .x-more__btn{
+    align-items: center;
+    background: rgba(255,255,255,.15);
+    color: rgba(255,255,255,.8);
+    display: flex;
+    font-size: 12px;
+    font-weight: 500;
+    height: 44px;
+    letter-spacing: 1px;
+    line-height: 1.67;
+    margin-top: 30px;
+    padding: 0 20px;
+    text-transform: uppercase;
+}
+
+.x-more__btn svg{
+    margin-left: auto;
+}
+
+.mobile__features{
+    display: flex;
+    margin-top: 140px;
+}
+
+.mobile-features__col{
+    justify-content: space-between;
+    padding: 0 5%;
+    text-align: center;
+    width: 33%;
+}
+.mobile-features__col svg{
+    display: block;
+    height: 40px;
+    margin: 0 auto 24px;
+    width: 40px;
+}
+
+.mobile-features__numbering {
+    color: rgba(255,255,255,.2);
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.mobile-features__col h3 {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.5;
+    margin: 10px 0 30px;
+}
+
+.mobile-features__col:not(:last-child) {
+    border-right: 1px solid rgba(255,255,255,.1);
+}
+
+.trezor__wallet-img{
+    border-radius: 8px 8px 0 0;
+    box-shadow: 0 20px 40px rgb(0 0 0 / 50%);
+    margin: 4%;
+}
+
+.x-p-hp-section {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.5;
+    margin: 0;
+    opacity: .5;
+    padding: 0;
+}
+
+.trezor__wallet-img img{
+    width: 100%;
+}
+
+.trezor-more{
+    background-image: linear-gradient(309deg,#420be6,#a16bb3);
+    box-shadow: 0 10px 30px 0 rgb(111 57 205 / 30%);
+    color: #fff;
+    font-size: 20px !important;
+    font-weight: 200;
+    max-width: 100%;
+    padding: 50px 30px 40px;
+    position: relative;
+    text-align: left;
+    width: 300px;
+    z-index: 3;
+    margin: -140px auto 0 0;
+}
+
+.trezor-more .x-more__btn{
+    align-items: center;
+    background: rgba(255,255,255,.15);
+    color: rgba(255,255,255,.8);
+    display: flex;
+    font-size: 12px;
+    font-weight: 500;
+    height: 44px;
+    letter-spacing: 1px;   
+    line-height: 1.67;
+    margin-top: 30px;
+    padding: 0 20px;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 768px) {
+    .asset__pattern{
+        margin-bottom: 28px;
+        margin-right: 0;
+    }
+    .asset__pattern-content {
+        display: block;
+    }
+
+    .mobile-wallet .h2-mobile-wallet {
+        font-size: 46px;
+        text-align: center;
+    }
+
+    .mobile__features {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+    }
+
+    .mobile-features__col {
+        margin-bottom: 32px;
+        width: 100%;
+    }
+
+    .mobile-features__col:not(:last-child) {
+        border-right: 0;
+    }
+
+    .mobile-wallet .p-mobile-wallet{
+        font-size: 20px;
+    }
+}

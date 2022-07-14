@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+
+body{
+  background-color: #1f2033 !important;
+  font-family: Roboto, sans-serif;
+}
+
+.form {
+  min-height: 70vh;
+  width: 500px;
+  margin: 0px auto;
+}
+
+.login_logo{
+  width: 150px;
+}
+
+.login_logo img{
+  width: 100%;
+  color: #fff !important;
+}
+
+.form h1{
+  opacity: 85% !important;
+  font-size: 1.5rem !important;
+}
+
+.form-label{
+  margin-bottom: 0 !important;
+}
+
+.login-btn{
+  background-image: linear-gradient(281deg,#420be6,#a16bb3);
+  box-shadow: 0 10px 30px 0 rgb(111 57 205 / 30%);
+  border: 1px solid rgba(255,255,255,.3);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 25px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: .9rem;
+  max-width: 100%;
+  width: 360px;
+  font-family: Roboto,sans-serif;
+  height: 48px;
+  opacity: .8;
+  outline: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: opacity .2s linear;
+  margin: 30px auto 40px;
+}
+
+.form_input{
+  background: rgba(141, 141, 141, 0.3) !important;
+  padding: 8px !important;
+  color: #fff !important;
+  border: none !important;
+  outline: none !important;
+  text-indent: 15px;
+  /* border: 1px solid rgba(255,255,255,.3) !important; */
+}
+
+.form_input img{
+  position: absolute;
+}
+
+::placeholder{
+  color: #aaa !important;
+}
+
+.form_input:focus{
+  outline: none !important;
+}
+
+
+
+h1,h2{
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 30px;
+  color: #fff;
+}
+
+p{
+  font-weight: 400;
+  font-size: 1rem;
+  color: #fff;
+  line-height: 35px;
+  opacity: 85%;
+}
+
+a{
+  text-decoration: none !important;
+  color: #fff !important;
+}
+
+a:hover{
+  color: unset;
+}
+
+ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.coin-card{
+  border: 1px solid rgba(255, 255, 255, .3);
+  color:  rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  margin: 10px 0;
+  align-items: center;
+}
+
+.coin__img{
+  width: 50px;
+  height: 50px;
+}
+
+
+
+
+section,footer{
+  padding: 60px 0;
+}
+
+
+@media screen and (max-width: 500px) {
+  .form{
+    width: 400px;
+  }
+
+  .form-input{
+    width: 100%;
+  }
+}

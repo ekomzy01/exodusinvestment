@@ -1,0 +1,77 @@
+@media (max-width: 991.98px){
+.navbar-expand-lg>.container, .navbar-expand-lg>.container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.navbar>.container, .navbar>.container-fluid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.x__topbar-header-content {
+    box-sizing: content-box;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1170px;
+    padding: 0 16px;
+}
+.container-fluid {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+}
+
+@media screen and (max-width: 790px) {
+    .fixed-top {
+        left: 0;
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 1030;
+    }
+    
+    .fixed-top {
+        left: 0;
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 1030;
+    }
+    .x__topbar-header {
+        background-color: #1f1b34;
+        display: flex;
+        max-height: 86px;
+        overflow: visible;
+        padding: 0;
+        position: fixed;
+        transition: all .5s;
+        width: 100%;
+        z-index: 1000;
+    }
+    .fixed-top {
+        left: 0;
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 1030;
+    }
+    .navbar {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.5rem 1rem;
+    }
+    article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, section {
+        display: block;
+    }
+}
+
