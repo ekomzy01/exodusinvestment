@@ -1,0 +1,30 @@
+{
+  "name": "ExodusAPI",
+  "version": "1.0.0",
+  "description": "Exodus Crypto App",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "exofrontend": "npm start --prefix exofrontend",
+    "exofrontendinstall": "npm install --prefix exofrontend",
+    "dev": "concurrently \"npm run server\" \"npm run exofrontend\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix exofrontend && npm run build --prefix exofrontend"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "config": "^3.3.7",
+    "express": "^4.18.1",
+    "express-validator": "^6.14.2",
+    "hamburger-react": "^2.5.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.4.2"
+  },
+  "devDependencies": {
+    "concurrently": "^7.2.2",
+    "nodemon": "^2.0.18"
+  }
+}
