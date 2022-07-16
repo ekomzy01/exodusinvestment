@@ -119,6 +119,8 @@ ul{
 }
 
 .coin-card{
+  display: flex;
+  justify-content: space-between;
   border: 1px solid rgba(255, 255, 255, .3);
   color:  rgba(255, 255, 255, 0.8);
   border-radius: 5px;
@@ -131,6 +133,9 @@ ul{
   height: 50px;
 }
 
+.coin__content{
+  padding: 1.5rem;
+}
 
 
 
@@ -153,7 +158,7 @@ section,footer{
     height: 30px;
   }
   .coin__content{
-    padding: 1.5rem .5rem !important;
+    padding: 1.5rem .5rem;
     align-items: center;
   }
   .coin__percentage{

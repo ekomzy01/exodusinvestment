@@ -21,8 +21,8 @@ const Coin = ({
   }, [numberOfCoins, current_price]);
 
   return (
-    <div className="d-flex coin-card justify-content-between" onClick={onclick}>
-      <div className="coin__content d-flex p-4 ">
+    <div className="coin-card" onClick={onclick}>
+      <div className="coin__content d-flex ">
         <div className="coin__img mx-3 d-flex justify-content-center align-item-center ">
           <img src={image} alt={name} className="w-100 " />
         </div>
