@@ -141,7 +141,7 @@ section,footer{
 
 @media screen and (max-width: 500px) {
   .form{
-    width: 400px;
+    width: 350px;
   }
 
   .form-input{

@@ -31,6 +31,10 @@ const Header = () => {
     },
   ];
 
+  const handleClick = () => {
+    setOpen(false);
+  };
+
   return (
     <header className="header">
       <Container>
@@ -103,7 +107,9 @@ const Header = () => {
                 <div className="x__topbar-header-container">
                   <div className="x__topbar-header-logo-space"></div>
                   <ul className="x__topbar-header-navigation" id="headernav">
-                    <li className="x__topbar-header-navigation-item x__topbar-header-navigation-item__home">
+                    <li
+                      className="x__topbar-header-navigation-item x__topbar-header-navigation-item__home"
+                      onClick={handleClick}>
                       {Nav__Link.map((item, index) => (
                         <NavLink to={item.url} key={index}>
                           {item.display}

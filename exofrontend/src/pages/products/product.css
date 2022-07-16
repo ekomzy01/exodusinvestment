@@ -89,12 +89,16 @@ h5.text-danger {
     }
 
     .coin__content{
-        padding: 1.5rem .5rem;
+        padding: 1.5rem .5rem !important;
+        align-items: center;
     }
-    .coin-card{
+    .coin__percentage{
+        margin-left: 0!important;
+        margin-right: 0.5!important;
+    }
+    .coin_img{
         width: 30px;
         height: 30px;
-        align-items: center;
     }
 }
 
