@@ -16,7 +16,7 @@ app.use('/api/coins/', require('./routes/coins'))
 if(process.env.NODE_ENV === "production"){
     app.use(express.static("exofrontend"));
 
-    app.get("*", (req, resp) => resp.sendFile(path.resolve(__dirname, "exofrontend", "public", "build", "index.html")))
+    app.get("*", (req, resp) => resp.sendFile(path.resolve(__dirname, "exofrontend", "build", "index.html")))
 }
 
 const PORT = process.env.PORT || 5000
