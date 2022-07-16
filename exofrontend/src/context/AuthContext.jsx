@@ -83,8 +83,6 @@ export const AuthProvider = ({ children }) => {
       navigate("/wallet");
     } else {
       setError(data.errors[0].msg);
-      console.log(data.errors[0].msg);
-      console.error(data);
     }
   };
 

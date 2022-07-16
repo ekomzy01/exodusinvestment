@@ -87,6 +87,15 @@ h5.text-danger {
         width: 500px;
         background: #fff;
     }
+
+    .coin__content{
+        padding: 1.5rem .5rem;
+    }
+    .coin-card{
+        width: 30px;
+        height: 30px;
+        align-items: center;
+    }
 }
 
 @media screen and (max-width: 768px) {
