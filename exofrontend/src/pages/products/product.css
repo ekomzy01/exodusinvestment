@@ -101,7 +101,7 @@ h5.text-danger {
         height: 30px;
     }
     .coin-card{
-        justify-content: space-around;
+        justify-content: space-between;
     }
 }
 

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Container } from "reactstrap";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import logo from "../../assests/images/Exodus_Logo.svg";
 import { Spin as Hamburger } from "hamburger-react";
 import "./header.css";
@@ -19,7 +19,7 @@ const Header = () => {
     },
     {
       display: "Crypto News",
-      url: "https://www.exodus.com/news/",
+      url: "",
     },
     {
       display: "Company",
@@ -41,20 +41,37 @@ const Header = () => {
         <nav className="navigation d-flex align-item-center justify-content-around">
           <div className="logo d-flex align-item-center">
             <h2 className="d-flex logo-container">
-              <Link to="/">
+              <a href="/">
                 <img src={logo} alt="logo" />
-              </Link>
+              </a>
             </h2>
           </div>
 
           <div className="nav__menu ">
             <ul className="nav__list ">
               <li className="nav__item d-flex gap-3">
-                {Nav__Link.map((item, index) => (
-                  <NavLink to={item.url} key={index}>
-                    {item.display}
-                  </NavLink>
-                ))}
+                <NavLink to="/desktop">Product</NavLink>
+              </li>
+            </ul>
+          </div>
+          <div className="nav__menu ">
+            <ul className="nav__list ">
+              <li className="nav__item d-flex gap-3">
+                <NavLink to="/contact-support">Support</NavLink>
+              </li>
+            </ul>
+          </div>
+          <div className="nav__menu ">
+            <ul className="nav__list ">
+              <li className="nav__item d-flex gap-3">
+                <a href="https://www.exodus.com/news/">Crypto News</a>
+              </li>
+            </ul>
+          </div>
+          <div className="nav__menu ">
+            <ul className="nav__list ">
+              <li className="nav__item d-flex gap-3">
+                <NavLink to="/wallet">Wallet</NavLink>
               </li>
             </ul>
           </div>

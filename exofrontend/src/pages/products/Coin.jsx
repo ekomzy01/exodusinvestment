@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import AuthContext from "../../context/AuthContext";
 import "./coin.css";
 
 const Coin = ({
@@ -9,9 +10,19 @@ const Coin = ({
   price_change_percentage_24h,
   symbol,
 }) => {
+  const { coin, coins } = useContext(AuthContext);
   const [price, setPrice] = useState(0);
-  const [numberOfCoins] = useState(0);
+  const [numberOfCoins, setNumberOfCoins] = useState(0);
 
+  const formatpercentage = (number) => `${new Number(number).toFixed(2)}`;
+  if (coin.length > 0) {
+    coins.map((coinItem) => {
+      return coinItem.name === symbol
+        ? setNumberOfCoins((prev) => prev + coinItem.amount_of_coin)
+        : "";
+    });
+  }
+  console.log(coin);
   const marketPrice = () =>
     numberOfCoins !== 0 ? setPrice(numberOfCoins * current_price) : setPrice(0);
 
@@ -44,7 +55,7 @@ const Coin = ({
           className={
             price_change_percentage_24h >= 1 ? "text-success" : "text-danger"
           }>
-          {price_change_percentage_24h}%
+          {formatpercentage(price_change_percentage_24h)}%
         </p>
       </div>
     </div>

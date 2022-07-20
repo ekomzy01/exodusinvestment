@@ -1,7 +1,7 @@
 import React from "react";
 
 const Newsletter = () => {
-  return <div>Newsletter</div>;
+  return <h1>hello world</h1>;
 };
 
 export default Newsletter;

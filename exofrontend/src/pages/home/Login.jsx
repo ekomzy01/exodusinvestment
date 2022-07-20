@@ -16,7 +16,7 @@ const Login = () => {
     if (error) {
       setTimeout(() => {
         setError(null);
-      }, 5000);
+      }, 3000);
     }
     // eslint-disable-next-line
   }, [error]);
@@ -28,6 +28,7 @@ const Login = () => {
 
   return (
     <div className="form">
+      {/* <p className="text-danger my-4">{error}</p> */}
       <h1 className="text-center my-4">Please Login to Access Your Wallet</h1>
       <div className="form-input my-3">
         <label htmlFor="email" className="form-label text-white">
