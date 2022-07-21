@@ -112,14 +112,11 @@ h5.text-danger {
 @media screen and (max-width: 768px) {
     .cards{
         display: flex;
-        column-gap: 40px;
+        column-gap: 20px;
     }
     
     .transaction__card{
-      
-        
         padding: 0;
-        
         color: blue;
         display: flex;
         flex-direction: column;
