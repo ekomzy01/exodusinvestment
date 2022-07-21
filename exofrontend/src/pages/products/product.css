@@ -84,13 +84,13 @@ h5.text-danger {
 }
 
 @media screen and (max-width: 990px) {
-    .transaction-wedget{
+    /* .transaction-wedget{
         position: absolute;
         top: 40px;
         left: 80px;
         width: 500px;
         background: #fff;
-    }
+    } */
 
     .coin__content{
         padding: 1.5rem .5rem !important;
@@ -110,10 +110,37 @@ h5.text-danger {
 }
 
 @media screen and (max-width: 768px) {
-    .transaction-wedget{
-       left: 100px;
-        width: 300px;
-       
+    .cards{
+        display: flex;
+        column-gap: 40px;
+    }
+    
+    .transaction__card{
+      
+        
+        padding: 0;
+        
+        color: blue;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+        height: 80;
+      
+        }
+    
+    .transaction__card i{
+        color: blue;
+        width: 100%;
+        font-size: 1rem;
+        margin-right: 10px;
+    }
+    
+    .wallet_bal {
+        border: 1px solid #333;
+        padding: 7px 35px;
+        border-radius: 10px;
     }
     .btn{
         justify-self: center;
