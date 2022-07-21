@@ -10,21 +10,16 @@ const Coin = ({
   price_change_percentage_24h,
   symbol,
 }) => {
-  const { coin, coins } = useContext(AuthContext);
+  const { coin } = useContext(AuthContext);
   const [price, setPrice] = useState(0);
   const [numberOfCoins, setNumberOfCoins] = useState(0);
 
-  const formatpercentage = (number) => `${new Number(number).toFixed(2)}`;
-  if (coin.length > 0) {
-    coins.map((coinItem) => {
-      return coinItem.name === symbol
-        ? setNumberOfCoins((prev) => prev + coinItem.amount_of_coin)
-        : "";
-    });
-  }
+  // if (coin.length > 0) {
+  //   setNumberOfCoins(coin[0].amount_of_coin);
+  // }
   console.log(coin);
   const marketPrice = () =>
-    numberOfCoins !== 0 ? setPrice(numberOfCoins * current_price) : setPrice(0);
+    numberOfCoins > 0 ? setPrice(numberOfCoins * current_price) : setPrice(0);
 
   useEffect(() => {
     marketPrice();
@@ -55,7 +50,7 @@ const Coin = ({
           className={
             price_change_percentage_24h >= 1 ? "text-success" : "text-danger"
           }>
-          {formatpercentage(price_change_percentage_24h)}%
+          {price_change_percentage_24h.toFixed(2)}%
         </p>
       </div>
     </div>

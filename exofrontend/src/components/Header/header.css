@@ -99,7 +99,7 @@
 
      
 
-    .navbar-collapse:before {
+    .navigation .navbar-collapse:before {
         -webkit-animation: overlay .8s ease .1s forwards;
         animation: overlay .8s ease .1s forwards;
         background: #1f1b34;

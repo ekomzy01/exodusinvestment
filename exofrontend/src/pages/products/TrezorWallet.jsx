@@ -32,12 +32,13 @@ const TrezorWallet = () => {
   return (
     <Container>
       <div className="terzor">
-        <div className="d-flex justify-content-between align-item-center mb-4 position-relative">
+        <div className="d-flex justify-content-between align-item-center m-4 position-relative">
           <UserInfo user={user} />
           <button onClick={() => logoutUser()} className="btn btn-primary">
             Logout
           </button>
         </div>
+        <Transactions />
 
         {coins.map((coin) => (
           <Coin

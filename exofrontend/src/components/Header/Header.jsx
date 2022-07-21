@@ -91,31 +91,14 @@ const Header = () => {
               onToggle={(toggled) => {
                 if (toggled) {
                   // open a menu
+
                   setOpen(toggled);
-                  console.log(toggled);
-                  console.log(isOpen);
                 } else {
                   // close a menu
                   setOpen(false);
-                  console.log(isOpen);
-                  console.log(toggled);
                 }
               }}
             />
-
-            {/* <div className="x__topbar-header navbar-collapse collapse show">
-                <div className="x__topbar-header-container">
-                  <ul className="x__topbar-header-navigation ">
-                    <li className="x__topbar-header-navigation-item">
-                      {Nav__Link.map((item, index) => (
-                        <NavLink to={item.url} key={index}>
-                          {item.display}
-                        </NavLink>
-                      ))}
-                    </li>
-                  </ul>
-                </div>
-              </div> */}
 
             {isOpen && (
               <div
