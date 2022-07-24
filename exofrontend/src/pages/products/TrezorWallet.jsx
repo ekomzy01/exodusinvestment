@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { Container } from "reactstrap";
 import Coin from "./Coin";
 import UserInfo from "../home/UserInfo";
@@ -6,9 +6,7 @@ import AuthContext from "../../context/AuthContext";
 import Transactions from "./Transactions";
 
 const TrezorWallet = () => {
-  const [element, setElement] = useState("");
-  const [transaction, setTransaction] = useState(false);
-  const { user, logoutUser, coins, loadUser, getCoins } =
+  const { user, logoutUser, coins, loadUser, coinsArray } =
     useContext(AuthContext);
 
   useEffect(() => {
@@ -17,18 +15,10 @@ const TrezorWallet = () => {
   }, []);
 
   useEffect(() => {
-    getCoins();
+    coinsArray();
     // eslint-disable-next-line
   }, []);
 
-  const handleClick = (coinName) => {
-    coins.map((coin) => {
-      return coin.name === coinName
-        ? setElement(() => <Transactions key={coin.id} {...coin} />)
-        : "it did't work";
-    });
-    setTransaction((prev) => !prev);
-  };
   return (
     <Container>
       <div className="terzor">
@@ -41,14 +31,8 @@ const TrezorWallet = () => {
         <Transactions />
 
         {coins.map((coin) => (
-          <Coin
-            key={coin.id}
-            {...coin}
-            onclick={() => handleClick(coin.name)}
-          />
+          <Coin key={coin.id} {...coin} />
         ))}
-
-        {transaction && <div className="transaction-wedget">{element}</div>}
       </div>
     </Container>
   );

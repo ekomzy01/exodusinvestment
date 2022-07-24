@@ -1,45 +1,47 @@
 import React, { useState, useEffect } from "react";
-
+import { useContext } from "react";
+import AuthContext from "../../context/AuthContext";
 import "./product.css";
 
-const Transactions = ({
-  image,
-  current_price,
-  price_change_percentage_24h,
-  name,
-}) => {
-  const [price, setPrice] = useState(0);
-  const [numberOfCoin] = useState(0);
-
-  const handleBuy = () => {};
-  const handleSell = () => {};
+const Transactions = () => {
+  const [price] = useState(0);
+  const { money, getCoins, isAuthenticate, isLoading } =
+    useContext(AuthContext);
 
   useEffect(() => {
-    numberOfCoin > 0 ? setPrice(numberOfCoin * current_price) : setPrice(0);
-  }, [numberOfCoin, current_price]);
+    getCoins();
+    // eslint-disable-next-line
+  }, []);
 
   return (
     <div className="transaction ">
       <div className="coin-logo">
         <div className="coin__info">
-          <h3 className="text-bold fs-1">USD {price}</h3>
+          {money !== null &&
+          money.length > 0 &&
+          isAuthenticate &&
+          !isLoading ? (
+            <h3 className="text-bold fs-1">USD {money[0].amount_of_coin}</h3>
+          ) : (
+            <h3 className="text-bold fs-1">USD {price}</h3>
+          )}
         </div>
       </div>
 
       <div className="cards">
-        <div className="transaction__card" onClick={handleBuy}>
+        <div className="transaction__card">
           <div className="transaction__icon">
             <i className="ri-bank-card-line"></i>
           </div>
           <h6>Deposit</h6>
         </div>
-        <div className="transaction__card" onClick={handleSell}>
+        <div className="transaction__card">
           <div className="transaction__icon">
             <i className="ri-bit-coin-line"></i>
           </div>
           <h6>Buy/Sell</h6>
         </div>
-        <div className="transaction__card" onClick={handleSell}>
+        <div className="transaction__card">
           <div className="transaction__icon">
             <i className="ri-exchange-dollar-line"></i>
           </div>

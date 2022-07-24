@@ -1,5 +1,4 @@
 import React, { useState, useContext } from "react";
-import { useEffect } from "react";
 import AuthContext from "../../context/AuthContext";
 
 const Login = () => {
@@ -12,14 +11,11 @@ const Login = () => {
     setUser((prev) => ({ ...prev, [name]: value }));
   };
 
-  useEffect(() => {
+  setTimeout(() => {
     if (error) {
-      setTimeout(() => {
-        setError(null);
-      }, 3000);
+      setError(null);
     }
-    // eslint-disable-next-line
-  }, [error]);
+  }, 5000);
 
   const loginBtn = () => {
     loginUser(user);

@@ -27,7 +27,7 @@ export const AuthProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState("");
   const [coins, setCoins] = useState([]);
-  const [coin, setCoin] = useState([]);
+  const [money, setMoney] = useState(null);
   const [isAuthenticate, setIsAuthenticate] = useState(false);
 
   const navigate = useNavigate();
@@ -38,10 +38,6 @@ export const AuthProvider = ({ children }) => {
     );
     setCoins(response.data);
   };
-
-  useEffect(() => {
-    coinsArray();
-  }, []);
 
   const loadUser = async () => {
     if (localStorage.authToken) {
@@ -63,13 +59,13 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
-  const loginUser = async (email, password) => {
+  const loginUser = async (userData) => {
     const response = await fetch("api/auth/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(email, password),
+      body: JSON.stringify(userData),
     });
     const data = await response.json();
 
@@ -81,36 +77,46 @@ export const AuthProvider = ({ children }) => {
       loadUser();
 
       navigate("/wallet");
-    } else {
-      setError(data.errors[0].msg);
+    } else if (response.status === 400) {
+      const { message } = data;
+      setError(message);
     }
   };
 
-  const registerUser = async (first_name, last_name, username, email) => {
+  const registerUser = async (register) => {
     const response = await fetch("api/users/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(first_name, last_name, username, email),
+      body: JSON.stringify(register),
     });
     const resp = await response.json();
+    const { email } = register;
+    const { message } = resp;
 
-    if (response.status === 200) {
-      navigate("/wallet");
-      setToken(resp);
-      setIsAuthenticate(true);
-      setIsLoading(false);
-      setUser(resp);
-      loadUser();
+    if (response.status === 400) {
+      setError(message);
+    }
+
+    if (resp.status === "PENDING") {
+      navigate(`/emailsent/${email}`);
+      console.log(email);
+      // setToken(resp);
+      // setIsAuthenticate(true);
+      // setIsLoading(false);
+      // setUser(resp);
+      // loadUser();
     } else {
-      setError(resp.errors[0].msg);
+      setError(resp.message);
+      console.log("something went wrong");
     }
   };
 
   const logoutUser = () => {
     setToken(null);
     setUser(null);
+    setMoney(null);
     localStorage.removeItem("authToken");
     navigate("/");
   };
@@ -118,7 +124,7 @@ export const AuthProvider = ({ children }) => {
   const getCoins = async () => {
     try {
       const res = await axios.get("api/coins");
-      setCoin(res.data);
+      setMoney(res.data);
     } catch (err) {
       setError(err.response.msg);
     }
@@ -149,9 +155,10 @@ export const AuthProvider = ({ children }) => {
         setToken,
         coins,
         loadUser,
-        coin,
-        setCoin,
+        money,
+        setMoney,
         getCoins,
+        coinsArray,
       }}>
       {isLoading ? null : children}
     </AuthContext.Provider>

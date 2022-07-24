@@ -13,15 +13,28 @@ const Register = () => {
 
   const { registerUser, setError, error } = useContext(AuthContext);
 
-  const handleClick = (e) => {
+  setTimeout(() => {
+    if (error) {
+      setError(null);
+    }
+  }, 5000);
+
+  const handleChange = (e) => {
     const { name, value } = e.target;
     setRegister((prev) => ({ ...prev, [name]: value }));
   };
 
-  const { username, email, password, password2 } = register;
+  const { username, email, password, password2, first_name, last_name } =
+    register;
 
   const handleSubmit = () => {
-    if (username === "" || email === "" || password === "") {
+    if (
+      username === "" ||
+      email === "" ||
+      password === "" ||
+      first_name === "" ||
+      last_name === ""
+    ) {
       setError("Please Enter all fills");
     } else if (password !== password2) {
       setError("Passwords do not match");
@@ -43,8 +56,8 @@ const Register = () => {
           className="form-control form_input"
           name="first_name"
           placeholder="Enter Your firstName"
-          value={register.first_name}
-          onChange={handleClick}
+          value={first_name}
+          onChange={handleChange}
           required
         />
       </div>
@@ -57,8 +70,8 @@ const Register = () => {
           className="form-control form_input"
           name="last_name"
           placeholder="Enter Your lastName"
-          value={register.last_name}
-          onChange={handleClick}
+          value={last_name}
+          onChange={handleChange}
           required
         />
       </div>
@@ -71,8 +84,8 @@ const Register = () => {
           className="form-control form_input"
           name="username"
           placeholder="Enter Your Username"
-          value={register.username}
-          onChange={handleClick}
+          value={username}
+          onChange={handleChange}
           required
         />
       </div>
@@ -85,8 +98,8 @@ const Register = () => {
           className="form-control form_input"
           name="email"
           placeholder="Enter Your Email"
-          value={register.email}
-          onChange={handleClick}
+          value={email}
+          onChange={handleChange}
           required
         />
       </div>
@@ -99,8 +112,8 @@ const Register = () => {
           className="form-control form_input"
           name="password"
           placeholder="Enter Your password"
-          value={register.password}
-          onChange={handleClick}
+          value={password}
+          onChange={handleChange}
           required
           minLength="8"
         />
@@ -114,8 +127,8 @@ const Register = () => {
           className="form-control form_input"
           name="password2"
           placeholder="Enter Your password"
-          value={register.password2}
-          onChange={handleClick}
+          value={password2}
+          onChange={handleChange}
           required
           minLength="8"
         />
