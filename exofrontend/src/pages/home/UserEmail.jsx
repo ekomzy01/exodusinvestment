@@ -13,7 +13,9 @@ const UserEmail = () => {
         <em className="text-primary">{userEmail}</em>
       </p>
       <p>check your email and come back to proceed!</p>
-      <button className="btn btn-primary" onClick={() => navigate("/login")}>
+      <button
+        className="btn btn-primary user-email-btn"
+        onClick={() => navigate("/login")}>
         proceed
       </button>
     </div>
