@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import AuthContext from "../../context/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
   const [register, setRegister] = useState({
@@ -12,6 +13,7 @@ const Register = () => {
   });
 
   const { registerUser, setError, error } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   setTimeout(() => {
     if (error) {
@@ -141,7 +143,7 @@ const Register = () => {
         <button
           className="btn btn-primary mx-2"
           onClick={() => {
-            window.location.href = "/login";
+            navigate("/login");
           }}>
           Login
         </button>

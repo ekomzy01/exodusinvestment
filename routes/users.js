@@ -1,5 +1,6 @@
 const express = require("express");
 const User = require("../models/User");
+const Coins = require("../models/Coins");
 const UserVerification = require("../models/UserVerification");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
@@ -68,9 +69,19 @@ router.post(
         verified: false,
       });
 
+      const newCoins = new Coins({
+        user: user._id,
+        coin: "BTC",
+        amount_of_coin: "0",
+      });
+
       const salt = await bcrypt.genSalt(10);
       user.password = await bcrypt.hash(password, salt);
+
+      await newCoins.save();
+
       await user.save();
+
       const { id } = user;
       const payload = {
         user: {

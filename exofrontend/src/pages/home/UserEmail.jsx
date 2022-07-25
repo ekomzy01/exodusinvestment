@@ -1,9 +1,10 @@
 import React from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import "./userInfo.css";
 
 const UserEmail = () => {
   const { userEmail } = useParams();
+  const navigate = useNavigate();
   return (
     <div className="user-email">
       <h1>Account Confirmation</h1>
@@ -12,9 +13,9 @@ const UserEmail = () => {
         <em className="text-primary">{userEmail}</em>
       </p>
       <p>check your email and come back to proceed!</p>
-      <Link className="btn btn-primary" to={`/login`}>
+      <button className="btn btn-primary" onClick={() => navigate("login")}>
         proceed
-      </Link>
+      </button>
     </div>
   );
 };
