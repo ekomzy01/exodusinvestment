@@ -153,3 +153,12 @@
     } */
   
 }
+
+@media (max-width: 768px) {
+    .x-testimonials-carousel__content p{
+        margin: 0 auto 0;
+    }
+    .x-testimonials-carousel{
+        margin: auto;
+    }
+}

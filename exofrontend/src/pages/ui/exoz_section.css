@@ -306,6 +306,13 @@
         max-width: 100%;
         margin-top: 60px;
         row-gap: 10px;
+        align-items: center;
+        
+    }
+
+    .x-page-index .x-header__buttons,
+    .home__btn a{
+        padding: 10px;
     }
 
     .x__feature-banner__wrapper {

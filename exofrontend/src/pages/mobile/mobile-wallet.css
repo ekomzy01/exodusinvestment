@@ -173,9 +173,15 @@ section{padding: 14px !important;}
     .asset__pattern{
         margin-bottom: 28px;
         margin-right: 0;
+        padding: 20px;
     }
     .asset__pattern-content {
-        display: block;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mobile__wallet-content{
+        flex-direction: column;
     }
 
     .mobile-wallet .h2-mobile-wallet {

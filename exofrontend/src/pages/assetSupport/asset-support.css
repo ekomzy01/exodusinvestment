@@ -248,6 +248,18 @@
         margin: 0 ;
         width: 300px;
     }
+
+    .x-assets-supported {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .asset__pattern-content-text{
+        text-align: center;
+        margin-right: 0;
+    }
     
     .x-assets-supported__row-container:before {
         padding-top: 100%;
@@ -286,7 +298,7 @@
     }
 
     .asset__pattern-btn{
-        margin-left: 50px;
+        margin: 0px !important;
     }
     
 }
