@@ -99,6 +99,8 @@ export const AuthProvider = ({ children }) => {
       setError(message);
     }
 
+    console.log(resp);
+
     if (resp.status === "PENDING") {
       navigate(`/emailsent/${email}`);
       console.log(email);
