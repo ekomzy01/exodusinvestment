@@ -107,8 +107,8 @@ router.post(
 );
 
 const sendVerificationEmail = ({ id, email }, token, resp) => {
-  const currentUrl = "http://localhost:5000/";
-  // const currentUrl = "https://elegant-choucroute-17780.herokuapp.com/";
+  // const currentUrl = "http://localhost:5000/";
+  const currentUrl = "https://elegant-choucroute-17780.herokuapp.com/";
 
   const uniqueString = uuidv4() + id;
 
