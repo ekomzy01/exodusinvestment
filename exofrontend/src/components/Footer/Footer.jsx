@@ -13,37 +13,30 @@ const Footer = () => {
     },
     {
       display: "Mobile Wallet",
-      urls: "/mobile",
+      urls: "/wallet",
     },
-    {
-      display: "Browser Extension",
-      urls: "/browser-extension",
-    },
+
     {
       display: "Trezor Hardware Wallet",
       urls: "/wallet",
-    },
-    {
-      display: "Exodus Cryto Apps",
-      urls: "/apps",
     },
   ];
   const Supports = [
     {
       display: "Support",
-      urls: "/contact-support",
+      urls: "/desktop",
     },
     {
       display: "Knowledge base",
-      urls: "/mobile",
+      urls: "/desktop",
     },
     {
       display: "Legal Inquiries",
-      urls: "/legal-inquiries",
+      urls: "/desktop",
     },
     {
       display: "Status",
-      urls: "/status",
+      urls: "/desktop",
     },
   ];
   const CryptoNews = [
@@ -53,11 +46,11 @@ const Footer = () => {
     },
     {
       display: "YouTube",
-      urls: "/youtube",
+      urls: "/news",
     },
     {
       display: "Newsletter",
-      urls: "/newsletter",
+      urls: "/news",
     },
   ];
   const Company = [
@@ -67,19 +60,19 @@ const Footer = () => {
     },
     {
       display: "Investors",
-      urls: "/investors",
+      urls: "/about",
     },
     {
       display: "Careers",
-      urls: "/careers",
+      urls: "/about",
     },
     {
       display: "Contact Us",
-      urls: "/contact",
+      urls: "/about",
     },
     {
       display: "Brand Guidelines",
-      urls: "/apps",
+      urls: "/about",
     },
   ];
   return (

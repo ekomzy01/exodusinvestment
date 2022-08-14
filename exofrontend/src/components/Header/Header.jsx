@@ -10,19 +10,19 @@ const Header = () => {
   const [isOpen, setOpen] = useState(false);
   const Nav__Link = [
     {
+      display: "Home",
+      url: "/home",
+    },
+    {
       display: "Product",
       url: "/desktop",
     },
     {
-      display: "Support",
-      url: "/contact-supports",
-    },
-    {
       display: "Crypto News",
-      url: "",
+      url: "/news",
     },
     {
-      display: "Company",
+      display: "About",
       url: "/about",
     },
     {
@@ -50,6 +50,13 @@ const Header = () => {
           <div className="nav__menu ">
             <ul className="nav__list ">
               <li className="nav__item d-flex gap-3">
+                <NavLink to="/home">Home</NavLink>
+              </li>
+            </ul>
+          </div>
+          <div className="nav__menu ">
+            <ul className="nav__list ">
+              <li className="nav__item d-flex gap-3">
                 <NavLink to="/desktop">Product</NavLink>
               </li>
             </ul>
@@ -57,14 +64,14 @@ const Header = () => {
           <div className="nav__menu ">
             <ul className="nav__list ">
               <li className="nav__item d-flex gap-3">
-                <NavLink to="/contact-support">Support</NavLink>
+                <NavLink to="/news">Crypto News</NavLink>
               </li>
             </ul>
           </div>
           <div className="nav__menu ">
             <ul className="nav__list ">
               <li className="nav__item d-flex gap-3">
-                <a href="https://www.exodus.com/news/">Crypto News</a>
+                <NavLink to="/about">About</NavLink>
               </li>
             </ul>
           </div>

@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import AuthContext from "../../context/AuthContext";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 const Login = () => {
   const [user, setUser] = useState({ email: "", password: "" });
@@ -20,8 +21,13 @@ const Login = () => {
 
   const loginBtn = () => {
     loginUser(user);
-    setUser((prev) => ({ ...prev }));
+    // setUser((prev) => ({ ...prev }));
   };
+
+  useEffect(() => {
+    loginBtn();
+    // eslint-disable-next-line
+  }, []);
 
   return (
     <div className="form">

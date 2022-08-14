@@ -1,0 +1,271 @@
+.x-header {
+    background-image: url('./about/img/header-bg-msize.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-items: center;
+    background-color: #1f2033;
+    display: flex;
+    min-height: 720px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.x-header__darken {
+    transition: all .2s linear;
+    background: #1f2033;
+    bottom: 0;
+    left: 0;
+    opacity: .6;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 5;
+}
+
+.x-header__bg-container {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.x-header__content {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    text-align: left;
+    width: 100%;
+    z-index: 10;
+}
+
+.x-header__txt-container {
+    box-sizing: border-box;
+    color: #fff;
+    flex-shrink: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.x__width {
+    padding: 0 16px;
+    box-sizing: content-box;
+    margin: 0 auto;
+    max-width: 1170px;
+}
+
+.x-header__heading {
+    color: #fff;
+    font-size: 80px;
+    font-weight: 300;
+    line-height: 1.1;
+    margin: 20px 0;
+    padding-top: 0;
+}
+
+.x-header__heading span {
+    display: inline-block;
+}
+
+/* Brand CSS */
+
+.x-mission {
+    background: #fff;
+    padding-top: 128px;
+}
+
+.x-mission svg {
+    display: block;
+    height: 20px;
+    margin: 0 auto 40px;
+    width: 20px;
+}
+
+.x-about-subheading {
+    color: rgba(31,32,51,.4);
+    display: block;
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 4px;
+    line-height: 1.67;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.x-mission__heading {
+    color: #1f2033;
+    font-size: 44px;
+    font-weight: 100;
+    line-height: 1.25;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.x-mission .row {
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+}
+
+.x-mission__txt {
+    color: #1f2033;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.78;
+    margin: 0 10px;
+    max-width: 370px !important;
+    opacity: .6;
+}
+
+/* Career CSS */
+.x-features__subheading {
+    color: #1f2033;
+    display: block;
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 4px;
+    line-height: 1.67;
+    opacity: .4;
+    text-align: center;
+}
+
+.x-features__heading {
+    color: #1f2033;
+    display: block;
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 1.25;
+    text-align: center;
+}
+
+.x-feature {
+    background: #fff;
+    min-height: 890px;
+    padding-top: 90px;
+}
+
+/* Investors CSS */
+.x-info {
+    background-image: linear-gradient(283deg,#5c26ff,#8c66ff);
+    margin-top: -152px;
+    padding: 96px 0;
+    position: relative;
+}
+
+.x-info:before {
+    background-image: linear-gradient(283deg,#5c26ff,#8c66ff);
+    content: "";
+    height: 300px;
+    left: 40px;
+    opacity: .7;
+    position: absolute;
+    top: -120px;
+    width: calc(100% - 80px);
+}
+
+.x-info__icn {
+    display: block;
+    height: 24px;
+    margin: -40px 0 20px;
+    width: 18px;
+}
+
+.x-info__subheading {
+    color: #fff;
+    display: block;
+    font-size: 12px;
+    letter-spacing: 4px;
+    opacity: .4;
+    text-transform: uppercase;
+}
+
+.x-info__heading {
+    color: #fff;
+    display: block;
+    font-size: 48px;
+    font-weight: 300;
+}
+
+.x-info__txt {
+    color: #fff;
+    display: block;
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.54;
+    margin-top: 14px;
+    max-width: 170px;
+    opacity: .6;
+}
+
+@media (min-width: 992px){
+    .x-info .col:not(:first-child) {
+        position: relative;}
+    
+    .x-info .col:not(:first-child):before {
+        border-left: 1px dashed rgba(255,255,255,.2);
+        bottom: 45%;
+        content: "";
+        display: block;
+        left: -16px;
+        position: absolute;
+        top: 0;
+        width: 1px;
+    }
+}
+
+   
+
+@media (min-width: 768px){
+    .x-feature {
+        background-image: url("./about/img/mission-bg-lsize.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 767px){
+    .x-feature {
+        background-image: url("./about/img/mission-bg-msize.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+@media (max-width: 768px){
+    .x-header {
+        min-height: 500px;
+    }
+
+    .x-header__txt-container {
+        padding-top: 46px;
+        text-align: center;
+    }
+
+    .x-header__heading {
+        font-size: 48px;
+    }
+    .x-features__heading {
+        margin-bottom: 40px;
+    }
+
+    .x-header__heading span:nth-child(3):after {
+        background-image: linear-gradient(271deg,#420be6,#a16bb3);
+        box-shadow: 0 10px 30px 0 rgb(111 57 205 / 30%);
+        content: "";
+        display: block;
+        height: 5px;
+        margin-top: 15px;
+        width: 100%;
+    }
+}
+
+
+

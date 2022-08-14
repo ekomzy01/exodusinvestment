@@ -53,7 +53,7 @@ const MobileWallet = () => {
         </div>
         <div className="x-more">
           Experience the world's best cryptocurrency wallet from any location...
-          <Link to="/mobile" className="x-more__btn">
+          <Link to="/wallet" className="x-more__btn">
             Mobile Wallet
             <svg width="31" height="15" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -144,7 +144,7 @@ const MobileWallet = () => {
         </div>
         <div className="trezor-more">
           The security of Trezor meets the intuitive design of Exodus…
-          <Link to="/trezor-wallet" className="x-more__btn">
+          <Link to="/wallet" className="x-more__btn">
             Hardware Wallet
             <svg width="31" height="15" xmlns="http://www.w3.org/2000/svg">
               <path

@@ -21,7 +21,7 @@ const Coin = ({
         <div className="coin__details">
           <div className="coin-amount">
             <span className="mx-2 my-2">{name}</span>
-            <span className="mx-2 my-2">{symbol.toUpperCase()}</span>
+            <span className="mx-2 my-2 text-muted">{symbol.toUpperCase()}</span>
 
             <span>{numberOfCoins}</span>
           </div>

@@ -1,4 +1,30 @@
+.deposite,
+.withdrawal{
+  background: #aaa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+
+.deposite h6,
+.deposite h3,
+.withdrawal h6,
+.withdrawal h3{
+  color:  #000;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+
+
+
 @media screen and (max-width: 768px) {
+  .deposite,
+  .withdrawal{
+    text-align: center;
+  }
     .coin__img{
         width: 30px;
         height: 30px;

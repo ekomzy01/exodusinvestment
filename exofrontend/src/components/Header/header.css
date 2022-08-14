@@ -1,13 +1,13 @@
 .header{ 
     font-family: Roboto;
-     /* position: fixed; */
+     position: fixed;
     left: 0;
     right: 0;
     top: 0;
     width: 100%;
     background-color: #1f1b34;
     z-index: 1030;
-    position: relative;
+    /* position: relative; */
 }
 
 .hamburger{

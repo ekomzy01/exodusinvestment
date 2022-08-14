@@ -5,10 +5,8 @@ import AuthContext from "../context/AuthContext";
 import Home from "../pages/home/Home";
 import Login from "../pages/home/Login";
 import About from "../pages/company/About";
-import Brand from "../pages/company/Brand";
 import Careers from "../pages/company/Careers";
 import Contact from "../pages/company/Contact";
-import Investors from "../pages/company/Investors";
 import Desktop from "../pages/products/Desktop";
 import ExodusApp from "../pages/products/ExodusApp";
 import Extension from "../pages/products/Extension";
@@ -23,6 +21,8 @@ import Newsletter from "../pages/crypto/Newsletter";
 import Register from "../pages/home/Register";
 import UserEmail from "../pages/home/UserEmail";
 import ProtectedRoute from "../utils/ProtectedRoute";
+import Withdrawal from "../pages/products/Withdrawal";
+import Deposite from "../pages/products/Deposite";
 
 const Routers = () => {
   const { user } = useContext(AuthContext);
@@ -37,7 +37,8 @@ const Routers = () => {
         <Route path=":userEmail" element={<UserEmail />} />
       </Route>
       <Route path="login" element={<Login />} />
-
+      <Route path="wallet/deposite" element={<Deposite />} />
+      <Route path="wallet/withdrawal" element={<Withdrawal />} />
       <Route path="register" element={<Register />} />
       <Route
         path="wallet"
@@ -52,13 +53,11 @@ const Routers = () => {
       <Route path="status" element={<Status />} />
       <Route path="knowledge" element={<Knowledge />} />
       <Route path="about" element={<About />} />
-      <Route path="investors" element={<Investors />} />
       <Route path="news" element={<News />} />
       <Route path="youtube" element={<YouTube />} />
       <Route path="newsletter" element={<Newsletter />} />
       <Route path="careers" element={<Careers />} />
       <Route path="contact" element={<Contact />} />
-      <Route path="brand" element={<Brand />} />
     </Routes>
   );
 };

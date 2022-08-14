@@ -623,4 +623,9 @@ svg:not(:root) {
 .x__wallet__header .x__content .x-header__description {
     font-size: 24px;
     font-weight: 100;
-}}
+}
+.x__assets-count-heading .x__animated-number {
+    font-size: 100px;
+}
+
+}

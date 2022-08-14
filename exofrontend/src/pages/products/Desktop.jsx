@@ -43,19 +43,9 @@ const Desktop = () => {
                 cryptocurrency.
               </p>
               <div className="x__download-buttons">
-                <a
-                  href="https://www.youtube.com/watch?v=m3miyYQXnrs"
-                  data-fancybox="true"
-                  className="x__button x__button-sec">
+                <Link className="x__button" to="/wallet">
                   <span className="x__button-align">
-                    <span className="x__button-align-text">Watch Video</span>
-                  </span>
-                </a>
-                <Link className="x__button" to="/download/">
-                  <span className="x__button-align">
-                    <span className="x__button-align-text">
-                      Download Wallet
-                    </span>
+                    <span className="x__button-align-text">Wallet</span>
                   </span>
                 </Link>
               </div>

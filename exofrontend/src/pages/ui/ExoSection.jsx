@@ -28,11 +28,11 @@ const ExoSection = () => {
           </p>
 
           <div className="home__btn d-flex align-item-center text-center justify-content-center">
-            <Link to="#" className="watch btn__home ">
-              <i className="ri-play-mini-fill"></i>Watch video
+            <Link to="/login" className="watch btn__home ">
+              <i className="ri-play-mini-fill"></i>Login wallet
             </Link>
-            <Link to="#" className="get btn__home ">
-              Get Exodus Now
+            <Link to="/register" className="get btn__home ">
+              Register wallet
             </Link>
           </div>
         </div>

@@ -26,8 +26,8 @@ export const AuthProvider = ({ children }) => {
 
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState("");
-  const [coins, setCoins] = useState([]);
-  const [money, setMoney] = useState(null);
+  const [coins, setCoins] = useState(() => []);
+  const [money, setMoney] = useState(() => null);
   const [isAuthenticate, setIsAuthenticate] = useState(false);
 
   const navigate = useNavigate();
@@ -38,6 +38,10 @@ export const AuthProvider = ({ children }) => {
     );
     setCoins(response.data);
   };
+
+  useEffect(() => {
+    coinsArray();
+  }, []);
 
   const loadUser = async () => {
     if (localStorage.authToken) {
@@ -131,6 +135,9 @@ export const AuthProvider = ({ children }) => {
       setError(err.response.msg);
     }
   };
+
+  console.log(money);
+  console.log(coins);
 
   useEffect(() => {
     if (token) {
